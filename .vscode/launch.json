@@ -1,0 +1,65 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${file}",
+            "env": {
+                "PERFORMANCE_FRAMEWORK_API_URL":"http://api.performance-framework.dcos.mars-fra-apps.zooz.co",
+                "ENVIRONMENT":"test",
+                "ARRIVAL_RATE": 3,
+                "RUN_ID":"7153eadb-3b37-4442-9bcb-0957a8fa7e75",
+                "KAFKA_URL":"10.100.11.62:9092",
+                "DURATION": 10,
+                "TEST_ID":"015e7a9f-07c7-41cc-b39e-0afd43594dcb",
+                "BASE_URL":"https://api-mars.paymentsos.com",
+                "ORIGIN":"https://my-mars.paymentsos.com",
+                "EMAILS":"dina6229@gmail.com",
+                "WEBHOOKS":"https://hooks.slack.com/services/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",
+                "CLUSTER":"MARS",
+                "MARATHON_APP_ID":"/performance-tests/c7z9f789-30b1-4919-9e20-6c63bbc92c03-test-runner/2018052113z8z9zHzxy",
+                "MULTICORE": true,
+                "PCI_GATEWAY_URL": "http://pci-api-gateway.api-gateway.dcos.mars-fra-apps.zooz.co",
+                "PAYMENTS_GATEWAY_URL": "http://payments-api-gateway.api-gateway.dcos.mars-fra-apps.zooz.co",                
+                "IS_USE_AKAMAI": false,
+                "INFLUX_PASSWORD": "telegrafMt20",
+                "INFLUX_USERNAME": "telegraf_metrics",
+                "INFLUX_HOST": "localhost",
+                "INFLUX_DATABASE": "metrics_paymentsos"
+                },
+            "outFiles": [],
+            "console": "integratedTerminal",
+            "sourceMaps": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch tests in debug",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "cwd": "${workspaceRoot}",
+            "args": ["${file}", "--no-timeouts"],
+            "env": {
+                "CASSANDRA_USERNAME":"cassandra",
+                "CASSANDRA_PASSWORD":"cassandra",
+                "CASSANDRA_KEYSPACE": "test_files",
+                "CASSANDRA_URL": "127.0.0.1:9042",
+                "REPLICATION_FACTOR": 1,
+                "BASE_URL": "https://api-qa.paymentsos.com",
+                "ORIGIN": "http://localhost:8080",
+                "METRONOME_URL": "https://dev-fra-apps.zooz.co/service/metronome",
+                "RUNNER_DOCKER_IMAGE": "docker-registry.zooz.co:4567/paymentsos/performance-framework/runner/master:1.0.0",
+                "PERFORMANCE_FRAMEWORK_API_URL": "localhost:8080",
+                "KAFKA_URL": "broker.kafka-1-0.l4lb.thisdcos.directory:9092",
+                "ENVIRONMENT": "DEV"
+                },
+            "outFiles": [],
+            "sourceMaps": true
+        }
+    ]
+}
