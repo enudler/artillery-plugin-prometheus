@@ -18,6 +18,14 @@ mock('influx', function() {
                 points: points,
                 callback: callback
             });
+        },
+        writePoint: function(measurementName, fields, tags, callback) {
+            influxWriteInvocations.push({
+                measurementName: measurementName,
+                fields: fields,
+                tags: tags,
+                callback: callback
+            });
         }
     };
 });
