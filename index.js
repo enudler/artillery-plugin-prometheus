@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require(__dirname + '/lib/influxdb');
+module.exports = require(__dirname + '/lib/prometheus');

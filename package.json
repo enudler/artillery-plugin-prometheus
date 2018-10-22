@@ -1,45 +1,32 @@
 {
-  "name": "artillery-plugin-influxdb",
-  "version": "0.8.0",
-  "description": "Plugin for Artillery.IO that records response data into InfluxDB.",
+  "name": "artillery-plugin-prometheus",
+  "version": "1.0.0",
+  "description": "Plugin for Artillery.IO that publishes response data into prometheus pushgateway.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
-    "jscs": "jscs .",
-    "jshint": "jshint .",
-    "validate": "npm ls",
-    "lint": "jshint ."
+    "test": "mocha test"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nordstrom/artillery-plugin-influxdb.git"
+    "type": "git"
   },
   "keywords": [
     "artillery",
     "plugin",
-    "influxdb"
+    "prometheus"
   ],
-  "author": "Greg Smith <greg.w.smith@nordstrom.com>",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/nordstrom/artillery-plugin-influxdb/issues"
-  },
-  "homepage": "https://github.com/nordstrom/artillery-plugin-influxdb#readme",
   "dependencies": {
-    "influx": "^4.2.0",
-    "pidusage": "^2.0.7",
-    "uuid": "^2.0.2"
+    "pidusage": "^2.0.17",
+    "prom-client": "^11.1.3",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "jscs": "^3.0.5",
-    "jshint": "^2.9.2",
-    "mocha": "^2.5.3",
-    "mock-require": "^1.3.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "mocha": "^5.2.0",
+    "mock-require": "^3.0.2",
     "precommit-hook": "^3.0.0"
   },
   "pre-commit": [
-    "jscs",
     "jshint",
     "validate",
     "test"
