@@ -17,8 +17,8 @@ To use:
                 "pushGatewayUrl": "http://localhost:9091",
                 "environment": "qa"
                 "labels":
-                   - "performance-test"
-                   - "artillery.io"
+                   "performance-test"
+                   "artillery.io"
             }
         }
       }
