@@ -15,8 +15,8 @@ To use:
                 "testName": "my_load_test_case",
                 "testRunId": "342-233-221",
                 "pushGatewayUrl": "http://localhost:9091",
-                "environment": "qa"
-                "labels":
+                "environment": "qa",
+                "labels": {
                    "performance-test"
                    "artillery.io"
             }
