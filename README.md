@@ -16,6 +16,9 @@ To use:
                 "testRunId": "342-233-221",
                 "pushGatewayUrl": "http://localhost:9091",
                 "environment": "qa"
+                "labels":
+                   - "performance-test"
+                   - "artillery.io"
             }
         }
       }
