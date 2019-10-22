@@ -7,6 +7,8 @@ To use:
 2. `npm install artillery-plugin-prometheus`
 3. Add `prometheus` Plugin config to your "`hello.json`" Artillery script
 
+json:
+
     ```json
     {
       "config": {
@@ -17,13 +19,29 @@ To use:
                 "pushGatewayUrl": "http://localhost:9091",
                 "environment": "qa",
                 "labels": {
-                   "performance-test"
-                   "artillery.io"
+                   "performance-test":
+                   "artillery.io":
             }
         }
       }
     }
     ```
+
+yaml:
+
+```
+config:
+  plugins:
+    prometheus:
+      testName: 'my_load_test_case'
+      pushGatewayUrl: 'http://localhost:9091'
+      environment: qa
+      labels:
+        target: 'http://target.domain.com'
+        scenario: postRequest
+```
+
+*Must specify labels with values.
 
 4. `artillery run hello.json`
 
